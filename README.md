@@ -1,37 +1,44 @@
-Microblog
+<h1>Microblog</h1>
 
-Microblog es un proyecto de plataforma de microblogging desarrollado en Python con el framework web Flask. Está diseñado para simular funcionalidades básicas de redes sociales como Twitter, permitiendo a los usuarios registrarse, publicar mensajes cortos (tweets), seguir a otros usuarios y interactuar mediante respuestas y likes.
-Características Principales
-
-    Autenticación de Usuarios: Permite a los usuarios registrarse, iniciar sesión y gestionar sus perfiles.
-
-    Publicación de Tweets: Los usuarios pueden escribir y publicar mensajes cortos que aparecen en su timeline y en los timelines de sus seguidores.
-
-    Seguimiento de Usuarios: Funcionalidad para seguir a otros usuarios y ver tweets exclusivamente de aquellos a quienes se sigue.
+<h2>Microblog es un proyecto de plataforma de microblogging desarrollado en Python con el framework web Flask. Está diseñado para simular funcionalidades básicas de redes sociales como Twitter, permitiendo a los usuarios registrarse, publicar mensajes cortos (tweets), seguir a otros usuarios y interactuar mediante respuestas y likes.</h2>
     
-    Interfaz de Usuario Intuitiva: Implementación de una interfaz amigable utilizando HTML, CSS y Jinja2 para la generación de plantillas dinámicas.
+<h3>Características Principales</h3>
 
-    Persistencia de Datos: Utilización de SQLAlchemy como ORM para la gestión de la base de datos SQLite, donde se almacenan usuarios, tweets y relaciones de seguimiento.
+<ul>
+<li>Autenticación de Usuarios: Permite a los usuarios registrarse, iniciar sesión y gestionar sus perfiles.</li>
 
-Estructura del Repositorio
+<li>Publicación de Tweets: Los usuarios pueden escribir y publicar mensajes cortos que aparecen en su timeline y en los timelines de sus seguidores.</li>
 
-    app.py: Punto de entrada de la aplicación Flask y configuración principal.
+<li>Seguimiento de Usuarios: Funcionalidad para seguir a otros usuarios y ver tweets exclusivamente de aquellos a quienes se sigue.</li>
+    
+<li>Interfaz de Usuario Intuitiva: Implementación de una interfaz amigable utilizando HTML, CSS y Jinja2 para la generación de plantillas dinámicas.</li>
 
-    models.py: Define los modelos de datos utilizando SQLAlchemy, incluyendo la estructura de usuarios y tweets.
+<li>Persistencia de Datos: Utilización de SQLAlchemy como ORM para la gestión de la base de datos SQLite, donde se almacenan usuarios, tweets y relaciones de seguimiento.</li>
+</ul>
 
-    routes.py: Contiene las rutas y controladores (handlers) que manejan las peticiones HTTP para la autenticación de usuarios, publicación de tweets y gestión de relaciones de seguimiento.
+<h3>Estructura del Repositorio</h3>
 
-    templates/: Carpeta que contiene las plantillas HTML utilizadas para la generación de las páginas web.
+<ul>
+<li>app.py: Punto de entrada de la aplicación Flask y configuración principal.</li>
 
-    static/: Directorio para archivos estáticos como imágenes, hojas de estilo CSS y scripts JavaScript.
+<li>models.py: Define los modelos de datos utilizando SQLAlchemy, incluyendo la estructura de usuarios y tweets.</li>
 
-    requirements.txt: Archivo que lista todas las dependencias de Python necesarias para ejecutar la aplicación.
+<li>routes.py: Contiene las rutas y controladores (handlers) que manejan las peticiones HTTP para la autenticación de usuarios, publicación de tweets y gestión de relaciones de seguimiento.</li>
 
-    migrations/: Directorio generado por Flask-Migrate para gestionar las migraciones de la base de datos.
+<li>templates/: Carpeta que contiene las plantillas HTML utilizadas para la generación de las páginas web.</li>
 
-Tecnologías Utilizadas
+<li>static/: Directorio para archivos estáticos como imágenes, hojas de estilo CSS y scripts JavaScript.</li>
 
-    Backend: Python, Flask
-    Base de Datos: SQLite (con SQLAlchemy)
-    Frontend: HTML, CSS (Bootstrap), Jinja2
-    Motor de búsqueda: ElasticSearch
+<li>requirements.txt: Archivo que lista todas las dependencias de Python necesarias para ejecutar la aplicación.</li>
+
+<li>migrations/: Directorio generado por Flask-Migrate para gestionar las migraciones de la base de datos.</li>
+</ul>
+
+<h3>Tecnologías Utilizadas</h3>
+
+<ul>
+<li>Backend: Python, Flask</li>
+<li>Base de Datos: SQLite (con SQLAlchemy)</li>
+<li>Frontend: HTML, CSS (Bootstrap), Jinja2</li>
+<li>Motor de búsqueda: ElasticSearch</li>
+</ul>
