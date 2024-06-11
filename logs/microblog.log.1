@@ -1,0 +1,135 @@
+2024-02-01 18:01:20,008 ERROR: Exception on /api/users [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 870, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 889, in finalize_request
+    response = self.make_response(rv)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1161, in make_response
+    raise TypeError(
+TypeError: The view function for 'api.get_users' did not return a valid response. The function either returned None or ended without a return statement.
+2024-02-01 18:02:53,199 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:94]
+2024-02-01 18:02:55,922 ERROR: Exception on /api/users [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/users/cucha/microblog/app/api/users.py", line 15, in get_users
+    return User.to_collection_dict(sa.select(User), page, per_page, 'api.get_users')
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 34, in to_collection_dict
+    'items': [item.to_dict() for item in resources.items],
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 34, in <listcomp>
+    'items': [item.to_dict() for item in resources.items],
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 198, in to_dict
+    'last_seen': self.last_seen.replace(tzinfo=timezone.utc).isoformat(),
+AttributeError: 'NoneType' object has no attribute 'replace'
+2024-02-01 18:04:24,909 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:94]
+2024-02-01 18:04:29,218 ERROR: Exception on /api/users [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/users/cucha/microblog/app/api/users.py", line 15, in get_users
+    return User.to_collection_dict(sa.select(User), page, per_page, 'api.get_users')
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 34, in to_collection_dict
+    'items': [item.to_dict() for item in resources.items],
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 34, in <listcomp>
+    'items': [item.to_dict() for item in resources.items],
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 198, in to_dict
+    'last_seen': self.last_seen.replace(
+AttributeError: 'NoneType' object has no attribute 'replace'
+2024-02-01 18:08:26,932 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:94]
+2024-02-01 18:08:50,736 ERROR: Exception on /api/users [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/users/cucha/microblog/app/api/users.py", line 15, in get_users
+    return User.to_collection_dict(sa.select(User), page, per_page, 'api.get_users')
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 34, in to_collection_dict
+    'items': [item.to_dict() for item in resources.items],
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 34, in <listcomp>
+    'items': [item.to_dict() for item in resources.items],
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 199, in to_dict
+    'last_seen': self.last_seen.replace(
+AttributeError: 'NoneType' object has no attribute 'replace'
+2024-02-01 18:14:08,739 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:94]
+2024-02-01 18:14:13,667 ERROR: Exception on /api/users [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/users/cucha/microblog/app/api/users.py", line 15, in get_users
+    return User.to_collection_dict(sa.select(User), page, per_page,
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 34, in to_collection_dict
+    'items': [item.to_dict() for item in resources.items],
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 34, in <listcomp>
+    'items': [item.to_dict() for item in resources.items],
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 199, in to_dict
+    'last_seen': self.last_seen.replace(
+AttributeError: 'NoneType' object has no attribute 'replace'
+2024-02-02 15:20:49,852 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:94]
+2024-02-02 15:21:18,981 ERROR: Exception on /api/users/7/followers [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: get_followers() got an unexpected keyword argument 'id'
+2024-02-02 15:22:46,672 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:94]
+2024-02-02 15:25:11,251 ERROR: Exception on /auth/reset_password_request [POST] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/users/cucha/microblog/app/auth/routes.py", line 63, in reset_password_request
+    send_password_reset_email(user)
+  File "/mnt/c/users/cucha/microblog/app/auth/email.py", line 10, in send_password_reset_email
+    text_body=render_template('email/reset_password.txt',
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home/moi/.local/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/moi/.local/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/mnt/c/users/cucha/microblog/app/templates/email/reset_password.txt", line 5, in top-level template code
+    {{ url_for('reset_password', token=token, _external=True) }}
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/moi/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_password' with values ['token']. Did you mean 'auth.reset_password' instead?

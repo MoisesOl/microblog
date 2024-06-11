@@ -1,0 +1,126 @@
+2024-01-30 19:22:44,723 ERROR: Exception on /search [GET] [in C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\app\main\routes.py", line 165, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\app\models.py", line 176, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\app\search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\elasticsearch\_sync\client\utils.py", line 426, in wrapped
+    return api(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\elasticsearch\_sync\client\__init__.py", line 3836, in search
+    return self.perform_request(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\elasticsearch\_sync\client\_base.py", line 285, in perform_request
+    meta, resp_body = self.transport.perform_request(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\elastic_transport\_transport.py", line 328, in perform_request
+    meta, raw_data = node.perform_request(
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x000001F2AAAD23F0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión))
+2024-01-30 19:23:45,244 ERROR: Exception on /search [GET] [in C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\app\main\routes.py", line 165, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\app\models.py", line 176, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\app\search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\elasticsearch\_sync\client\utils.py", line 426, in wrapped
+    return api(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\elasticsearch\_sync\client\__init__.py", line 3836, in search
+    return self.perform_request(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\elasticsearch\_sync\client\_base.py", line 320, in perform_request
+    raise HTTP_EXCEPTIONS.get(meta.status, ApiError)(
+elasticsearch.ApiError: ApiError(503, 'search_phase_execution_exception', None)
+2024-01-30 19:28:34,943 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:91]
+2024-01-30 20:03:03,625 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 20:03:38,088 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/./app/__init__.py:91]
+2024-01-30 20:06:10,791 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/./app/__init__.py:91]
+2024-01-30 20:06:38,833 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/./app/__init__.py:91]
+2024-01-30 20:13:34,911 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 20:13:42,256 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/./app/__init__.py:91]
+2024-02-01 17:50:47,463 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:94]
+2024-02-01 17:51:12,290 ERROR: Exception on /api/users/2 [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/users/cucha/microblog/app/api/users.py", line 7, in get_user
+    return db.get_or_404(User, id).to_dict()
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 198, in to_dict
+    'last_seen': self.last_seen.replace(tzinfo=timezone.utc).isoformat(),
+AttributeError: 'NoneType' object has no attribute 'replace'
+2024-02-01 17:53:33,832 ERROR: Exception on /api/users/2 [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/c/users/cucha/microblog/app/api/users.py", line 7, in get_user
+    return db.get_or_404(User, id).to_dict()
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 198, in to_dict
+    'last_seen': self.last_seen.replace(tzinfo=timezone.utc).isoformat(),
+AttributeError: 'NoneType' object has no attribute 'replace'
+2024-02-01 17:55:18,430 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:94]
+2024-02-01 18:01:02,959 ERROR: Exception on /api/users [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 870, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 889, in finalize_request
+    response = self.make_response(rv)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1161, in make_response
+    raise TypeError(
+TypeError: The view function for 'api.get_users' did not return a valid response. The function either returned None or ended without a return statement.

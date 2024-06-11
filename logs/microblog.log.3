@@ -1,0 +1,91 @@
+2024-01-30 18:13:54,779 ERROR: Exception on /search [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/users/cucha/microblog/app/main/routes.py", line 165, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 176, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/mnt/c/users/cucha/microblog/app/search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 426, in wrapped
+    return api(*args, **kwargs)
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 3836, in search
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 285, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 328, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f505b8c9b10>: Failed to establish a new connection: [Errno 111] Connection refused))
+2024-01-30 18:20:03,827 ERROR: Exception on /search [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/users/cucha/microblog/app/main/routes.py", line 165, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 176, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/mnt/c/users/cucha/microblog/app/search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 426, in wrapped
+    return api(*args, **kwargs)
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 3836, in search
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 285, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 328, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f505b880e20>: Failed to establish a new connection: [Errno 111] Connection refused))
+2024-01-30 18:20:24,286 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 18:20:33,934 ERROR: Exception on /search [GET] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/users/cucha/microblog/app/main/routes.py", line 165, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 176, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/mnt/c/users/cucha/microblog/app/search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 426, in wrapped
+    return api(*args, **kwargs)
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 3836, in search
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 285, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 328, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f95333508b0>: Failed to establish a new connection: [Errno 111] Connection refused))
+2024-01-30 18:27:56,029 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 19:22:14,381 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:91]
+2024-01-30 19:22:21,969 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:91]

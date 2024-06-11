@@ -1,0 +1,133 @@
+2024-01-25 15:57:31,760 ERROR: Exception on /favicon.ico [GET] [in C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 841, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 450, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\werkzeug\routing\map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 752, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 727, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\app\errors\handlers.py", line 7, in not_found_error
+    return render_template('errors/404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Cucha\microblog\app\templates\errors\404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Cucha\microblog\app\templates\base.html", line 37, in template
+    placeholder={{ _('g.search_form.q.label.text') }} ) }}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2024-01-25 15:57:47,356 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:00:40,408 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:02:42,095 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:03:06,174 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:07:44,461 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:10:07,470 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:11:01,806 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:11:35,212 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:11:47,478 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:12:24,938 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:12:48,551 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:17:05,506 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:17:21,534 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:17:35,212 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:18:16,766 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:18:21,804 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:22:19,013 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 16:22:24,612 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 17:30:42,789 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 17:34:16,678 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 17:36:36,644 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 17:42:01,160 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 17:49:08,013 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 17:49:40,759 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 17:53:08,669 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-25 17:53:38,840 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 11:54:29,996 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 11:54:41,105 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 13:18:16,955 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 13:18:24,473 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:04:11,560 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:04:32,009 ERROR: Exception on /send_message/bastian [GET] [in C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py:825]
+Traceback (most recent call last):
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\app\main\routes.py", line 189, in send_message
+    return render_template('send_message.html', title=_('Send Message'),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Cucha\microblog\app\templates\send_message.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Cucha\microblog\venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap/wtf.html
+2024-01-26 14:07:06,700 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:09:18,090 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:10:07,267 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:11:40,843 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:12:28,327 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:13:41,688 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:18:37,048 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:20:55,186 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:21:03,043 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:22:29,446 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]

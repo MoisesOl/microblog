@@ -1,0 +1,105 @@
+2024-01-26 14:22:35,522 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:23:12,008 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 14:23:17,852 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 16:36:59,781 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 16:40:41,258 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-26 16:40:45,990 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-29 16:09:07,489 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-29 16:24:12,055 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-29 16:31:31,598 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-29 16:42:22,900 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-29 20:08:08,919 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-29 17:10:38,368 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-29 20:13:13,673 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-29 17:48:01,336 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:87]
+2024-01-30 15:31:30,019 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-30 15:31:37,954 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:87]
+2024-01-30 17:54:06,561 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 17:54:50,279 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 17:54:52,910 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/./app/__init__.py:91]
+2024-01-30 18:06:17,080 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:91]
+2024-01-30 18:07:14,229 INFO: Microblog startup [in C:\Users\Cucha\microblog\app\__init__.py:91]
+2024-01-30 18:07:24,797 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 18:07:43,590 ERROR: Exception on /index [POST] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/users/cucha/microblog/app/main/routes.py", line 36, in index
+    db.session.commit()
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 598, in commit
+    return self._proxied.commit()
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1969, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1266, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/event/attr.py", line 378, in __call__
+    fn(*args, **kw)
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 200, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "/mnt/c/users/cucha/microblog/app/search.py", line 9, in add_to_index
+    current_app.elasticsearch.index(index=index, id=model.id, document=payload)
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 426, in wrapped
+    return api(*args, **kwargs)
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 2280, in index
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 285, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 328, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f58d40bbee0>: Failed to establish a new connection: [Errno 111] Connection refused))
+2024-01-30 18:12:06,734 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 18:12:30,631 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/app/__init__.py:91]
+2024-01-30 18:12:39,691 ERROR: Exception on /index [POST] [in /home/moi/.local/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/moi/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/moi/.local/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/mnt/c/users/cucha/microblog/app/main/routes.py", line 36, in index
+    db.session.commit()
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 598, in commit
+    return self._proxied.commit()
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1969, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1266, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "/home/moi/.local/lib/python3.10/site-packages/sqlalchemy/event/attr.py", line 378, in __call__
+    fn(*args, **kw)
+  File "/mnt/c/users/cucha/microblog/app/models.py", line 200, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "/mnt/c/users/cucha/microblog/app/search.py", line 9, in add_to_index
+    current_app.elasticsearch.index(index=index, id=model.id, document=payload)
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 426, in wrapped
+    return api(*args, **kwargs)
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 2280, in index
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/moi/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 285, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 328, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/moi/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 202, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f505ba3e590>: Failed to establish a new connection: [Errno 111] Connection refused))
+2024-01-30 18:12:52,531 INFO: Microblog startup [in /mnt/c/users/cucha/microblog/./app/__init__.py:91]
